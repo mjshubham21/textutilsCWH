@@ -6,11 +6,13 @@ function TextForm(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Concerted to Uppercase. ", "success");
   };
 
   const handleLowClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Concerted to Lowercase. ", "success");
   };
 
   // const handleCap = () => {
@@ -21,6 +23,7 @@ function TextForm(props) {
   const handleClear = () => {
     let newText = "";
     setText(newText);
+    props.showAlert("Cleared text. ", "success");
   };
   const handleChange = (e) => {
     setText(e.target.value);
@@ -30,13 +33,20 @@ function TextForm(props) {
       <div
         className="container"
         style={{
-          color: props.mode === "dark" ? "black" : "white",
+          color: props.mode === "light" ? "black" : "white",
         }}
       >
-        <h1>{props.heading}</h1>
+        <h1
+          style={{
+            color: props.mode === "dark" ? "black" : "white",
+          }}
+        >
+          {props.heading}
+        </h1>
         <div className="mb-3">
           <textarea
             style={{
+              color: props.mode === "light" ? "black" : "white",
               backgroundColor: props.mode === "dark" ? "grey" : "white",
             }}
             onChange={handleChange}
