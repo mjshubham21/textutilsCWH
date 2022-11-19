@@ -72,7 +72,7 @@ function TextForm(props) {
       <div
         className="container my-3"
         style={{
-          color: props.mode === "dark" ? "black" : "white",
+          color: props.mode === "light" ? "black" : "white",
         }}
       >
         <h2>Text Summery</h2>
