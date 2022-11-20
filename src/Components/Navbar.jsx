@@ -31,7 +31,7 @@ function Navbar(props) {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/about">
-                {props.about.Text}
+                {props.about.text}
               </Link>
             </li>
           </ul>

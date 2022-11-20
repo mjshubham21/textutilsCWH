@@ -33,7 +33,11 @@ function App() {
     <>
       {" "}
       <Router>
-        <Navbar mode={mode} toggleMode={toggleMode} />
+        <Navbar
+          mode={mode}
+          toggleMode={toggleMode}
+          about={{ text: "Your text here" }}
+        />
         <Alert alert={alert} />
 
         <div className="container">
