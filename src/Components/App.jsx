@@ -44,16 +44,17 @@ function App() {
           <Routes>
             {" "}
             {/*Switch */}
-            <Route path="/about" element={<About />}>
-              <About />
-            </Route>
-            <Route path="/" element={<TextForm />}>
-              <TextForm
-                showAlert={showAlert}
-                heading="Enter The Text."
-                mode={mode}
-              />
-            </Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route
+              path="/"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Enter The Text."
+                  mode={mode}
+                />
+              }
+            ></Route>
           </Routes>
         </div>
       </Router>
